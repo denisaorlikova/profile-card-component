@@ -1,12 +1,18 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
 // ---- VARIABLES -----
 
 // COLORS
 
 $white: #fff;
 $black: #000;
-$transparent-black: rgba(0,0,0,0.3);
-$grey-dark: #777;
-$grey-light: #ccc;
+$teal: #19A1AE;
+$text-dark: #2E3349;
+$text-light: #6B7082;
+$grey-light: rgba(0, 0, 0, 0.25);
+$grey-medium: #E8E9EC;
 
 // MIXINS
 
@@ -26,6 +32,125 @@ $grey-light: #ccc;
 }
 
 @mixin box-shadow {
-    -webkit-box-shadow: 0 4px 16px $grey-light;
-    box-shadow: 0 4px 16px $grey-light;
+    -webkit-box-shadow: 0 4px 4px 0 $grey-light;
+    box-shadow: 0 4px 4px 0 $grey-light;
+}
+
+@mixin border($my-color) {
+    border: 1px solid $my-color;
+}
+
+// APP STYLES
+
+body {
+    background-color: $teal;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.bg-pattern {
+    width: auto;
+    height: 100%; 
+}
+
+.bg-pattern__top {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 14.22%;
+    top: 7%;
+}
+
+.bg-pattern__bottom {
+    position: absolute;
+    left: 80%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: $white;
+    height: 374px;
+    width: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    @include box-shadow()
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.c-header {
+    height: 140px;
+    width: 350px;
+    background-image: url(../images/bg-pattern-card.svg);
+}
+
+.c-body {
+    position: relative;
+    top: -29.9%;
+    left: 0;
+}
+
+.c-avatar {
+    height: 100px;
+    width: 100px;
+    background-color: $white;
+    position: relative;
+    left: 50%;
+    bottom: 25%;
+    transform: translate(-50%, 50%);
+    z-index: 2;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.c-avatar--img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.c-person {
+    text-align: center;
+    color: $text-light;
+    padding: 72px 105px 28px 105px;
+}
+
+.c-person--name {
+    font-weight: 700;
+    color: $text-dark;
+    font-size: 18px;
+    display: inline-block;
+    margin: 12px 12px 12px 0;
+}
+
+.c-person--location {
+    font-size: 14px;
+}
+
+
+.c-stats {
+    @include flex(center, center, row)
+    border-top: 1px solid $grey-medium;
+    padding: 24px 48px;
+}
+
+.c-stat {
+    @include flex(center, center, column)
+    width: 33%;
+}
+
+.c-stat--count {
+    font-size: 18px;
+    color: $text-dark;
+    font-weight: 700;
+}
+
+.c-stat--name {
+    font-size: 10px;
+    color: $text-light;
+    letter-spacing: 1.5px;
 }
