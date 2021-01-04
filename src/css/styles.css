@@ -11,7 +11,7 @@ body {
 .bg-pattern__top {
   position: absolute;
   transform: translate(-50%, -50%);
-  right: 14.22%;
+  right: 24%;
   top: 7%; }
 
 .bg-pattern__bottom {
@@ -65,7 +65,7 @@ body {
 .c-person {
   text-align: center;
   color: #6B7082;
-  padding: 72px 105px 28px 105px; }
+  padding: 72px 105px 24px 105px; }
 
 .c-person--name {
   font-weight: 700;
@@ -117,3 +117,11 @@ body {
   font-size: 10px;
   color: #6B7082;
   letter-spacing: 1.5px; }
+
+@media screen and (max-width: 480px) {
+  .bg-pattern__top {
+    transform: none;
+    right: 25%;
+    top: -50%; }
+  .bg-pattern__bottom {
+    left: 120%; } }
