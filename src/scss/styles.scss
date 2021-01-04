@@ -95,13 +95,12 @@ body {
 }
 
 .c-avatar {
-    height: 100px;
-    width: 100px;
+    height: 96px;
+    width: 96px;
     background-color: $white;
     position: relative;
-    left: 50%;
-    bottom: 25%;
-    transform: translate(-50%, 50%);
+    left: 122px;
+    bottom: 53px;
     z-index: 2;
     border-radius: 50%;
     padding: 5px;
@@ -116,7 +115,7 @@ body {
 .c-person {
     text-align: center;
     color: $text-light;
-    padding: 72px 105px 24px 105px;
+    padding: 64px 105px 32px 105px;
 }
 
 .c-person--name {
@@ -135,7 +134,7 @@ body {
 .c-stats {
     @include flex(center, center, row)
     border-top: 1px solid $grey-medium;
-    padding: 24px 48px;
+    padding: 24px 48px 28px 24px;
 }
 
 .c-stat {
@@ -147,6 +146,7 @@ body {
     font-size: 18px;
     color: $text-dark;
     font-weight: 700;
+    margin-bottom: 4px;
 }
 
 .c-stat--name {
