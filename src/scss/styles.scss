@@ -134,7 +134,8 @@ body {
 .c-stats {
     @include flex(center, center, row)
     border-top: 1px solid $grey-medium;
-    padding: 24px 48px 28px 24px;
+    padding: 24px 48px 28px 48px;
+    text-align: center;
 }
 
 .c-stat {

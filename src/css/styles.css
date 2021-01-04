@@ -90,7 +90,8 @@ body {
   -ms-flex-direction: row;
   flex-direction: row;
   border-top: 1px solid #E8E9EC;
-  padding: 24px 48px 28px 24px; }
+  padding: 24px 48px 28px 48px;
+  text-align: center; }
 
 .c-stat {
   display: -webkit-box;
