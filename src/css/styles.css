@@ -46,13 +46,12 @@ body {
   left: 0; }
 
 .c-avatar {
-  height: 100px;
-  width: 100px;
+  height: 96px;
+  width: 96px;
   background-color: #fff;
   position: relative;
-  left: 50%;
-  bottom: 25%;
-  transform: translate(-50%, 50%);
+  left: 122px;
+  bottom: 53px;
   z-index: 2;
   border-radius: 50%;
   padding: 5px; }
@@ -65,7 +64,7 @@ body {
 .c-person {
   text-align: center;
   color: #6B7082;
-  padding: 72px 105px 24px 105px; }
+  padding: 64px 105px 32px 105px; }
 
 .c-person--name {
   font-weight: 700;
@@ -91,7 +90,7 @@ body {
   -ms-flex-direction: row;
   flex-direction: row;
   border-top: 1px solid #E8E9EC;
-  padding: 24px 48px; }
+  padding: 24px 48px 28px 24px; }
 
 .c-stat {
   display: -webkit-box;
@@ -111,7 +110,8 @@ body {
 .c-stat--count {
   font-size: 18px;
   color: #2E3349;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 4px; }
 
 .c-stat--name {
   font-size: 10px;
