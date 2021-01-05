@@ -61,7 +61,10 @@ table {
 body {
   background-color: #19A1AE;
   min-height: 100vh;
-  height: 100%; }
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-position: calc(-270px - ((1440px - 100vw)/2)) -520px, calc(710px - ((1440px - 100vw)/2)) 380px; }
 
 /* ----------------------
         Card
