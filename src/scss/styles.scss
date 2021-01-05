@@ -1,20 +1,40 @@
-// FONTS
+/* -----------------
+       Imports
+------------------- */
+
+// Fonts
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
-// ---- VARIABLES -----
+// Styles
 
-// COLORS
+@import 'reset';
+
+/* ------------------
+        Variables
+--------------------*/
+
+// Colors
 
 $white: #fff;
 $black: #000;
-$teal: #19A1AE;
+
+$primary: #19A1AE;
+
 $text-dark: #2E3349;
 $text-light: #6B7082;
+
 $grey-light: rgba(0, 0, 0, 0.25);
 $grey-medium: #E8E9EC;
 
-// MIXINS
+// Whitespace
+
+$spacer: 1rem;
+
+/* --------------------
+        Mixins
+----------------------*/
+
 
 @mixin flex($justify, $align, $direction) {
     display: -webkit-box;
@@ -40,32 +60,26 @@ $grey-medium: #E8E9EC;
     border: 1px solid $my-color;
 }
 
-// APP STYLES
+/* -----------------------
+        Base Styles
+------------------------*/
 
 body {
-    background-color: $teal;
-    max-height: 100vh;
-    overflow: hidden;
+    background-color: $primary;
+    min-height: 100vh;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image:
+        url(../images/bg-pattern-top.svg), 
+        url(../images/bg-pattern-bottom.svg);
+    background-position: 
+        calc(-270px - ((1440px - 100vw)/2)) -520px,
+        calc(710px - ((1440px - 100vw)/2)) 380px;
 }
 
-.bg-pattern {
-    width: auto;
-    height: 100%; 
-}
-
-.bg-pattern__top {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    right: 24%;
-    top: 7%;
-}
-
-.bg-pattern__bottom {
-    position: absolute;
-    left: 80%;
-    bottom: 0;
-    transform: translate(-50%, 50%);
-}
+/* ----------------------
+        Card
+------------------------*/
 
 .card {
     position: absolute;
@@ -82,16 +96,14 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-.c-header {
+.c-img {
+    content: " ";
+    display: block;
     height: 140px;
     width: 350px;
     background-image: url(../images/bg-pattern-card.svg);
-}
-
-.c-body {
-    position: relative;
-    top: -29.9%;
-    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .c-avatar {
@@ -99,8 +111,9 @@ body {
     width: 96px;
     background-color: $white;
     position: relative;
-    left: 122px;
-    bottom: 53px;
+    left: 175px;
+    top: 0;
+    transform: translate(-50%, -50%);
     z-index: 2;
     border-radius: 50%;
     padding: 5px;
@@ -112,42 +125,56 @@ body {
     border-radius: 50%;
 }
 
-.c-person {
+.c-header {
+    position: relative;
+    bottom: 33.5px;
+    left: 0;
+    padding: 0 105px;
     text-align: center;
-    color: $text-light;
-    padding: 64px 105px 32px 105px;
 }
 
-.c-person--name {
+.c-header__person {
+    color: $text-light;
     font-weight: 700;
     color: $text-dark;
     font-size: 18px;
-    display: inline-block;
-    margin: 12px 12px 12px 0;
+    margin-bottom: 8px;
 }
 
-.c-person--location {
+.c-header__person--age {
+    color: $text-light;
+    font-weight: 400;
+}
+
+.c-header__location {
     font-size: 14px;
+    margin-bottom: 32px;
+    color: $text-light;
 }
 
 
 .c-stats {
-    @include flex(center, center, row)
     border-top: 1px solid $grey-medium;
-    padding: 24px 48px 28px 48px;
-    text-align: center;
+    padding: 28px 48px 24px 48px;
+    position: relative;
+    left: 0;
+    bottom: 33px;
+
+    dl {
+        @include flex(space-around, center, row)
+        text-align: center;
+    }
 }
 
 .c-stat {
     @include flex(center, center, column)
-    width: 33%;
 }
 
 .c-stat--count {
     font-size: 18px;
     color: $text-dark;
     font-weight: 700;
-    margin-bottom: 4px;
+    margin-bottom: 9px;
 }
 
 .c-stat--name {
@@ -157,14 +184,4 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-
-    .bg-pattern__top {
-        transform: none;
-        right: 25%;
-        top: -50%;
-    }
-    
-    .bg-pattern__bottom {
-        left: 120%;
-    }
 }

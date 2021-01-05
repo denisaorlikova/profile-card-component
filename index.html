@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="src/css/styles.css">
-</head>
-<body>
-    <img class="bg-pattern bg-pattern__top" src="src/images/bg-pattern-top.svg" alt=" ">
-    <img class="bg-pattern bg-pattern__bottom" src="src/images/bg-pattern-bottom.svg" alt=" ">
-    <div class="card">
-        <div class="c-header"></div>
-        <div class="c-avatar">
-            <img class="c-avatar--img" src="src/images/image-victor.jpg" alt="Victor">
-        </div>
-        <div class="c-body">
-            <div class="c-person">
-                <div>
-                    <span class="c-person--name">Victor Crest</span><span class="c-person--age">26</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png"> 
+        <title>Profile Card Component | Denisa Orlikova</title>
+        <link rel="stylesheet" href="src/css/styles.css">
+    </head>
+    <body>
+        <div class="card">
+            <div class="c-img"></div>
+            <div class="c-avatar">
+                <img class="c-avatar--img" src="src/images/image-victor.jpg" alt="Victor">
+            </div>
+            <div class="c-header">
+                <div class="c-header__person">
+                    <h3>
+                        <span class="c-header__person--name">Victor Crest</span>
+                        <span class="c-header__person--age">26</span>
+                    </h3>
                 </div>
-                <div class="c-person--location">
-                    <span>London</span>
+                <div class="c-header__location">
+                    <p>
+                        <span class="c-person--location">London</span>
+                    </p>
                 </div>
             </div>
             <div class="c-stats">
-                <div class="c-stat">
-                    <span class="c-stat--count">80K</span>
-                    <span class="c-stat--name">Followers</span>
-                </div>
-                <div class="c-stat">
-                    <span class="c-stat--count">803K</span>
-                    <span class="c-stat--name">Likes</span>
-                </div>
-                <div class="c-stat">
-                    <span class="c-stat--count">1.4K</span>
-                    <span class="c-stat--name">Photos</span>
-                </div>
+                <dl>
+                    <div class="c-stat">
+                        <dt class="c-stat--count">80K</span>
+                        <dd class="c-stat--name">Followers</span>
+                    </div>
+                    <div class="c-stat">
+                        <dt class="c-stat--count">803K</span>
+                        <dd class="c-stat--name">Likes</span>
+                    </div>
+                    <div class="c-stat">
+                        <dt class="c-stat--count">1.4K</span>
+                        <dd class="c-stat--name">Photos</span>
+                    </div>
+                </dl>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
